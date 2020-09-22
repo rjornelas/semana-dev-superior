@@ -1,6 +1,10 @@
-com/rjornelas/dspesquisa/entities/Genre.java
- com.rjornelas.dspesquisa.entities.Genre
-com/rjornelas/dspesquisa/DspesquisaApplication.java
- com.rjornelas.dspesquisa.DspesquisaApplication
 com/rjornelas/dspesquisa/enums/Plataform.java
  com.rjornelas.dspesquisa.enums.Plataform
+com/rjornelas/dspesquisa/DspesquisaApplication.java
+ com.rjornelas.dspesquisa.DspesquisaApplication
+com/rjornelas/dspesquisa/entities/Game.java
+ com.rjornelas.dspesquisa.entities.Game
+com/rjornelas/dspesquisa/entities/Genre.java
+ com.rjornelas.dspesquisa.entities.Genre
+com/rjornelas/dspesquisa/entities/Record.java
+ com.rjornelas.dspesquisa.entities.Record

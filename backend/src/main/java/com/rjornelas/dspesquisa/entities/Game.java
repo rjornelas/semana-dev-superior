@@ -2,16 +2,14 @@ package com.rjornelas.dspesquisa.entities;
 
 import com.rjornelas.dspesquisa.enums.Plataform;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
+@Table(name="TB_GAME")
 public class Game implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -20,7 +18,11 @@ public class Game implements Serializable {
     private Long id;
     private String title;
     private Plataform platform;
+
+    @ManyToOne
+    @JoinColumn(name="genre_id")
     private Genre genre;
+    @OneToMany(mappedBy = "game")
     private List<Record> records = new ArrayList<>();
 
     public Game() {

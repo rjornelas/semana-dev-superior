@@ -1,14 +1,12 @@
 package com.rjornelas.dspesquisa.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 @Entity
+@Table(name="TB_RECORD")
 public class Record implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -18,6 +16,9 @@ public class Record implements Serializable {
     private String name;
     private Integer age;
     private Instant moment;
+    @ManyToOne
+    @JoinColumn(name="game_id")
+    private Game game;
 
     public Record() {
     }

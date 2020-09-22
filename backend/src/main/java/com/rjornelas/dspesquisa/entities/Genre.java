@@ -2,16 +2,14 @@ package com.rjornelas.dspesquisa.entities;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
+@Table(name="TB_GENRE")
 public class Genre implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,6 +18,7 @@ public class Genre implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @OneToMany(mappedBy = "genre")
     private List<Game> games = new ArrayList<>();
 
     public Genre() {
